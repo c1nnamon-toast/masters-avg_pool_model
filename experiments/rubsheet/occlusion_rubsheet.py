@@ -1,0 +1,245 @@
+"""Occlusion attribution analysis for the rubsheet experiment.
+
+Uses Captum's Occlusion (sliding-window perturbation) to explain SkyCNN's
+irradiance predictions on the rubsheet test set (standard polar-to-Cartesian
+panoramic unwrap).
+
+For each of six representative groups (low / medium / high irradiance, best /
+worst prediction errors, random) a grid of 7 images is saved showing:
+  - the original sky strip image
+  - the Occlusion attribution map (L2-aggregated over channels, [0,1])
+  - the attribution blended onto the original (red-tint overlay)
+
+Two attribution CSVs are written to the output directory:
+  attribution_values.csv   — per-image distribution stats for all 42 images
+  attribution_extremes.csv — global top-40 and bottom-40 pixel values with
+                             group, image index, and (row, col) coordinates
+
+A summary CSV of all test-set predictions is also saved.
+
+Tunable parameters
+------------------
+PATCH_SIZE      : int — side length of the occluded square (pixels).
+STRIDE          : int — step between patch centres (pixels).
+BASELINE_VALUE  : float — fill value in normalised pixel space.
+                  0.0 = mid-grey for images normalised to [-1, 1].
+
+Run
+---
+    python experiments/rubsheet/occlusion_rubsheet.py
+"""
+
+import sys
+import os
+import glob
+import re
+
+EXPERIMENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT   = os.path.dirname(os.path.dirname(EXPERIMENT_DIR))
+sys.path.insert(0, PROJECT_ROOT)
+sys.path.insert(0, EXPERIMENT_DIR)
+
+import torch
+import numpy as np
+import logging
+from captum.attr import Occlusion
+
+import config_rubsheet as config
+from nn.model import SkyCNN
+from nn.loader import get_dataloaders
+from utils.attribution_map import (
+    collect_all_results,
+    select_groups,
+    collect_group_attributions,
+    save_attribution_stats,
+    log_top_attribution_values,
+    plot_attribution_grid,
+    save_summary_csv,
+)
+from logger_helper import logger_setup
+
+logger = logging.getLogger(__name__)
+
+
+# ---------------------------------------------------------------------------
+# Occlusion parameters  ← adjust these if runtime is too slow / coarse
+# ---------------------------------------------------------------------------
+
+PATCH_SIZE     = 50     # occluded square patch side length (pixels)
+STRIDE         = 25     # sliding-window step (pixels)
+BASELINE_VALUE = 0.0    # fill value in normalised space (0 = mid-grey)
+
+N_PER_GROUP     = 7
+TOP_N           = 40
+EXPERIMENT_NAME = "Rubsheet"
+METHOD_NAME     = "Occlusion"
+
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def find_latest_model(base_path):
+    """Return the most recent model checkpoint (by timestamp suffix)."""
+    model_dir   = os.path.dirname(base_path)
+    base_name   = os.path.basename(base_path).replace(".pth", "")
+    pattern     = os.path.join(model_dir, f"{base_name}_*.pth")
+    model_files = glob.glob(pattern)
+
+    if not model_files:
+        if os.path.exists(base_path):
+            return base_path
+        raise FileNotFoundError(f"No model files found matching {pattern}")
+
+    def extract_timestamp(path):
+        match = re.search(r"(\d{4}-\d{2}-\d{2}_\d{2}-\d{2})\.pth$", path)
+        return match.group(1) if match else ""
+
+    model_files.sort(key=extract_timestamp, reverse=True)
+    return model_files[0]
+
+
+def make_occlusion_attr_fn(occ, device, patch_size, stride, baseline_value):
+    """Return a callable that computes an Occlusion attribution map.
+
+    The map is NOT normalised here so that raw values can be inspected for
+    outliers via :func:`save_attribution_stats` and
+    :func:`log_top_attribution_values` before display normalisation.
+    """
+    if isinstance(patch_size, int):
+        sliding_window = (3, patch_size, patch_size)
+    else:
+        sliding_window = (3, patch_size[0], patch_size[1])
+
+    if isinstance(stride, int):
+        stride_tuple = (1, stride, stride)
+    else:
+        stride_tuple = (1, stride[0], stride[1])
+
+    def attr_fn(img_tensor):
+        inp      = img_tensor.to(device)
+        baseline = torch.full_like(inp, fill_value=baseline_value)
+
+        attributions = occ.attribute(
+            inp,
+            sliding_window_shapes=sliding_window,
+            strides=stride_tuple,
+            baselines=baseline,
+            target=0,
+        )
+
+        attr_np  = attributions.detach().cpu().numpy()[0]   # (C, H, W)
+        attr_map = np.linalg.norm(attr_np, axis=0)          # (H, W)
+
+        del attributions, inp, baseline
+
+        return attr_map
+
+    return attr_fn
+
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
+
+def main():
+    logger_setup(experiment_logfile=config.LOG_FILE)
+    device = config.DEVICE
+
+    logger.info("=== Occlusion Attribution — Rubsheet ===")
+    logger.info(
+        f"Occlusion params: patch_size={PATCH_SIZE}, stride={STRIDE}, "
+        f"baseline_value={BASELINE_VALUE}, top_n={TOP_N}"
+    )
+
+    # ── Load test data ──────────────────────────────────────────────────────
+    logger.info("Loading test data …")
+    _, _, test_loader, _ = get_dataloaders(
+        train_csv=config.TRAIN_CSV,
+        val_csv=config.VAL_CSV,
+        test_csv=config.TEST_CSV,
+        train_image_dir=config.TRAIN_IMAGE_DIR,
+        val_image_dir=config.VAL_IMAGE_DIR,
+        test_image_dir=config.TEST_IMAGE_DIR,
+        batch_size=config.BATCH_SIZE,
+        num_workers=config.NUM_WORKERS,
+        pin_memory=config.PIN_MEMORY,
+        normalize_mean=config.NORMALIZE_MEAN,
+        normalize_std=config.NORMALIZE_STD,
+    )
+
+    # ── Load model ──────────────────────────────────────────────────────────
+    model_path = find_latest_model(config.MODEL_SAVE_PATH)
+    logger.info(f"Loading model from {model_path}")
+    model = SkyCNN().to(device)
+    model.load_state_dict(
+        torch.load(model_path, map_location=device, weights_only=True)
+    )
+    model.eval()
+
+    # ── Collect all test-set predictions ────────────────────────────────────
+    results = collect_all_results(model, test_loader, device)
+
+    # ── Output directory ────────────────────────────────────────────────────
+    output_dir = os.path.join(config.ANALYSIS_DIR, "occlusion")
+    os.makedirs(output_dir, exist_ok=True)
+
+    # ── Save summary CSV ────────────────────────────────────────────────────
+    save_summary_csv(results, os.path.join(output_dir, "summary.csv"))
+
+    # ── Select representative groups ────────────────────────────────────────
+    groups = select_groups(results, n=N_PER_GROUP)
+
+    # ── Set up Occlusion ────────────────────────────────────────────────────
+    occ     = Occlusion(model)
+    attr_fn = make_occlusion_attr_fn(
+        occ, device,
+        patch_size=PATCH_SIZE,
+        stride=STRIDE,
+        baseline_value=BASELINE_VALUE,
+    )
+
+    # ── Pre-compute all attribution maps (single pass) ───────────────────────
+    group_attr_data = collect_group_attributions(groups, attr_fn)
+
+    # ── Attribution statistics: top/bottom values + per-image stats ──────────
+    save_attribution_stats(group_attr_data, output_dir, top_n=TOP_N)
+    log_top_attribution_values(group_attr_data, top_n=TOP_N)
+
+    # ── Generate one grid per group (reuse precomputed maps) ─────────────────
+    group_titles = {
+        "low":    "Low Irradiance",
+        "medium": "Medium Irradiance",
+        "high":   "High Irradiance",
+        "best":   "Best Predictions (lowest error)",
+        "worst":  "Worst Predictions (highest error)",
+        "random": "Random Sample",
+    }
+
+    for group_name, cases_maps in group_attr_data.items():
+        cases     = [c for c, _ in cases_maps]
+        attr_maps = [m for _, m in cases_maps]
+
+        norm_maps = []
+        for m in attr_maps:
+            amax = m.max()
+            norm_maps.append(m / amax if amax > 0 else m)
+
+        save_path = os.path.join(output_dir, f"{group_name}_occlusion.png")
+        plot_attribution_grid(
+            cases=cases,
+            attr_fn=None,
+            precomputed_maps=norm_maps,
+            title_prefix=group_titles[group_name],
+            method_name=METHOD_NAME,
+            experiment_name=EXPERIMENT_NAME,
+            save_path=save_path,
+            normalize_mean=config.NORMALIZE_MEAN,
+            normalize_std=config.NORMALIZE_STD,
+        )
+
+    logger.info("Occlusion analysis complete.")
+
+
+if __name__ == "__main__":
+    main()

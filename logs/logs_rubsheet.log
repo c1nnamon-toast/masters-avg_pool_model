@@ -1,0 +1,173 @@
+2026-03-02T09:32:36Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:32:36Z | INFO     |        __main__ | Sky Image CNN Training — Rubsheet Experiment
+2026-03-02T09:32:36Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:32:36Z | INFO     |        __main__ | Loading data...
+2026-03-02T09:32:36Z | INFO     |        __main__ | Train batches: 3200
+2026-03-02T09:32:36Z | INFO     |        __main__ | Val batches: 356
+2026-03-02T09:32:36Z | INFO     |        __main__ | Test batches: 578
+2026-03-02T09:32:36Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:32:36Z | INFO     |        __main__ | Exploratory Data Analysis
+2026-03-02T09:32:36Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:32:36Z | INFO     |    eda.analysis | DataFrame Info:
+2026-03-02T09:32:36Z | INFO     |    eda.analysis | Total samples: 33067
+2026-03-02T09:32:36Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-03-02T09:32:36Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-03-02T09:32:36Z | INFO     |    eda.analysis | Missing values: 0
+2026-03-02T09:32:36Z | INFO     |    eda.analysis | Zero values: 5
+2026-03-02T09:32:36Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/analysis/rubsheet/2026-03-02_10-32/irradiance_distribution.png
+2026-03-02T09:32:36Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:32:36Z | INFO     |        __main__ | Creating model
+2026-03-02T09:32:36Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:32:37Z | INFO     |        __main__ | Total parameters: 14,282,913
+2026-03-02T09:32:37Z | INFO     |        __main__ | Trainable parameters: 14,282,913
+2026-03-02T09:32:37Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:32:37Z | INFO     |        __main__ | Training
+2026-03-02T09:32:37Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:32:37Z | INFO     |      nn.trainer | Starting training for 15 epochs...
+2026-03-02T09:32:37Z | INFO     |      nn.trainer | Epoch 1/15
+2026-03-02T09:33:31Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:33:31Z | INFO     |        __main__ | Sky Image CNN Training — Rubsheet Experiment
+2026-03-02T09:33:31Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:33:31Z | INFO     |        __main__ | Loading data...
+2026-03-02T09:33:31Z | INFO     |        __main__ | Train batches: 3200
+2026-03-02T09:33:31Z | INFO     |        __main__ | Val batches: 356
+2026-03-02T09:33:31Z | INFO     |        __main__ | Test batches: 578
+2026-03-02T09:33:31Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:33:31Z | INFO     |        __main__ | Exploratory Data Analysis
+2026-03-02T09:33:31Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:33:31Z | INFO     |    eda.analysis | DataFrame Info:
+2026-03-02T09:33:31Z | INFO     |    eda.analysis | Total samples: 33067
+2026-03-02T09:33:31Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-03-02T09:33:31Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-03-02T09:33:31Z | INFO     |    eda.analysis | Missing values: 0
+2026-03-02T09:33:31Z | INFO     |    eda.analysis | Zero values: 5
+2026-03-02T09:33:31Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/analysis/rubsheet/2026-03-02_10-33/irradiance_distribution.png
+2026-03-02T09:33:31Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:33:31Z | INFO     |        __main__ | Creating model
+2026-03-02T09:33:31Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:33:32Z | INFO     |        __main__ | Total parameters: 14,282,913
+2026-03-02T09:33:32Z | INFO     |        __main__ | Trainable parameters: 14,282,913
+2026-03-02T09:33:32Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:33:32Z | INFO     |        __main__ | Training
+2026-03-02T09:33:32Z | INFO     |        __main__ | ============================================================
+2026-03-02T09:33:32Z | INFO     |      nn.trainer | Starting training for 10 epochs...
+2026-03-02T09:33:32Z | INFO     |      nn.trainer | Epoch 1/10
+2026-03-02T09:50:57Z | INFO     |      nn.trainer | Train Loss: 6205.6868 | Val Loss: 1754.6266
+2026-03-02T09:50:57Z | INFO     |      nn.trainer | Best model saved (val_loss: 1754.6266)
+2026-03-02T09:50:57Z | INFO     |      nn.trainer | Epoch 2/10
+2026-03-02T10:08:19Z | INFO     |      nn.trainer | Train Loss: 1796.7101 | Val Loss: 1609.8296
+2026-03-02T10:08:19Z | INFO     |      nn.trainer | Best model saved (val_loss: 1609.8296)
+2026-03-02T10:08:19Z | INFO     |      nn.trainer | Epoch 3/10
+2026-03-02T10:25:44Z | INFO     |      nn.trainer | Train Loss: 1217.2392 | Val Loss: 830.2901
+2026-03-02T10:25:44Z | INFO     |      nn.trainer | Best model saved (val_loss: 830.2901)
+2026-03-02T10:25:44Z | INFO     |      nn.trainer | Epoch 4/10
+2026-03-02T10:43:09Z | INFO     |      nn.trainer | Train Loss: 954.0153 | Val Loss: 852.7247
+2026-03-02T10:43:09Z | INFO     |      nn.trainer | Epoch 5/10
+2026-03-02T11:00:35Z | INFO     |      nn.trainer | Train Loss: 754.7753 | Val Loss: 478.1327
+2026-03-02T11:00:35Z | INFO     |      nn.trainer | Best model saved (val_loss: 478.1327)
+2026-03-02T11:00:35Z | INFO     |      nn.trainer | Epoch 6/10
+2026-03-02T11:17:59Z | INFO     |      nn.trainer | Train Loss: 660.7380 | Val Loss: 616.3817
+2026-03-02T11:17:59Z | INFO     |      nn.trainer | Epoch 7/10
+2026-03-02T11:35:24Z | INFO     |      nn.trainer | Train Loss: 564.9070 | Val Loss: 449.6368
+2026-03-02T11:35:24Z | INFO     |      nn.trainer | Best model saved (val_loss: 449.6368)
+2026-03-02T11:35:24Z | INFO     |      nn.trainer | Epoch 8/10
+2026-03-02T11:52:49Z | INFO     |      nn.trainer | Train Loss: 566.9125 | Val Loss: 298.5492
+2026-03-02T11:52:49Z | INFO     |      nn.trainer | Best model saved (val_loss: 298.5492)
+2026-03-02T11:52:49Z | INFO     |      nn.trainer | Epoch 9/10
+2026-03-02T12:10:14Z | INFO     |      nn.trainer | Train Loss: 511.7308 | Val Loss: 296.7477
+2026-03-02T12:10:14Z | INFO     |      nn.trainer | Best model saved (val_loss: 296.7477)
+2026-03-02T12:10:14Z | INFO     |      nn.trainer | Epoch 10/10
+2026-03-02T12:27:39Z | INFO     |      nn.trainer | Train Loss: 437.5885 | Val Loss: 415.6389
+2026-03-02T12:27:39Z | INFO     |      nn.trainer | Training complete! Time: 174.1 min
+2026-03-02T12:27:39Z | INFO     |      nn.trainer | Peak GPU Memory: 16230.00 MB
+2026-03-02T12:27:39Z | INFO     |        __main__ | ============================================================
+2026-03-02T12:27:39Z | INFO     |        __main__ | Testing
+2026-03-02T12:27:39Z | INFO     |        __main__ | ============================================================
+2026-03-02T12:27:39Z | INFO     | evaluation.evaluator | Loaded model from /home/xtsimbota_135764/masters/models/rubsheet_model.pth
+2026-03-02T12:29:00Z | INFO     | evaluation.evaluator | Test Results:
+2026-03-02T12:29:00Z | INFO     | evaluation.evaluator |   MSE Loss: 281.8519
+2026-03-02T12:29:00Z | INFO     | evaluation.evaluator |   RMSE: 16.7884 W/m²
+2026-03-02T12:29:00Z | INFO     | evaluation.evaluator |   MAE: 10.5335 W/m²
+2026-03-02T12:29:00Z | INFO     | evaluation.evaluator |   R² Score: 0.9962
+2026-03-02T12:29:00Z | INFO     |        __main__ | ============================================================
+2026-03-02T12:29:00Z | INFO     |        __main__ | Generating plots
+2026-03-02T12:29:00Z | INFO     |        __main__ | ============================================================
+2026-03-02T12:29:01Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/rubsheet/2026-03-02_10-33/training_curves.png
+2026-03-02T12:29:01Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/rubsheet/2026-03-02_10-33/predictions_vs_actual.png
+2026-03-02T12:29:02Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/rubsheet/2026-03-02_10-33/error_distribution.png
+2026-03-02T12:29:02Z | INFO     |        __main__ | ============================================================
+2026-03-02T12:29:02Z | INFO     |        __main__ | Creating report
+2026-03-02T12:29:02Z | INFO     |        __main__ | ============================================================
+2026-03-02T12:29:02Z | INFO     |  utils.reporter | Saved: /home/xtsimbota_135764/masters/analysis/rubsheet/2026-03-02_10-33/training_report_2026-03-02_13-29.md
+2026-03-02T12:29:02Z | INFO     |        __main__ | ============================================================
+2026-03-02T12:29:02Z | INFO     |        __main__ | Training Complete!
+2026-03-02T12:29:02Z | INFO     |        __main__ | ============================================================
+2026-03-02T12:29:02Z | INFO     |        __main__ | Model saved: /home/xtsimbota_135764/masters/models/rubsheet_model.pth
+2026-03-02T12:29:46Z | INFO     |        __main__ | Loading test data...
+2026-03-02T12:29:46Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_model.pth
+2026-03-02T12:29:46Z | INFO     |        __main__ | Running inference on test set...
+2026-03-02T12:31:43Z | INFO     |        __main__ | Best error range : 0.00 – 0.04
+2026-03-02T12:31:43Z | INFO     |        __main__ | Worst error range: 184.99 – 98.79
+2026-03-02T12:31:50Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Best Predictions (10 images)...
+2026-03-02T12:32:04Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet/gradcam/best_10_gradcam.png
+2026-03-02T12:32:04Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Worst Predictions (10 images)...
+2026-03-02T12:32:18Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet/gradcam/worst_10_gradcam.png
+2026-03-02T12:32:18Z | INFO     |        __main__ | Grad-CAM visualisation complete.
+2026-03-02T17:25:33Z | INFO     |        __main__ | Loading test data...
+2026-03-02T17:25:34Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_model.pth
+2026-03-02T17:25:34Z | INFO     |        __main__ | Running inference on test set...
+2026-03-02T17:27:27Z | INFO     |        __main__ | Best error range : 0.00 – 0.04
+2026-03-02T17:27:27Z | INFO     |        __main__ | Worst error range: 184.99 – 98.79
+2026-03-02T17:27:33Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Best Predictions (10 images)...
+2026-03-02T17:27:47Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet/gradcam/best_10_gradcam.png
+2026-03-02T17:27:47Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Worst Predictions (10 images)...
+2026-03-02T17:28:01Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet/gradcam/worst_10_gradcam.png
+2026-03-02T17:28:01Z | INFO     |        __main__ | Grad-CAM visualisation complete.
+2026-03-02T17:37:19Z | INFO     |        __main__ | Loading test data...
+2026-03-02T17:37:19Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_model.pth
+2026-03-02T17:37:19Z | INFO     |        __main__ | Running inference on test set...
+2026-03-02T17:39:09Z | INFO     |        __main__ | Best error range : 0.03 – 0.85
+2026-03-02T17:39:09Z | INFO     |        __main__ | Worst error range: 849.99 – 710.62
+2026-03-02T17:39:15Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Best Predictions (10 images)...
+2026-03-02T17:39:32Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet/gradcam/best_10_gradcam.png
+2026-03-02T17:39:32Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Worst Predictions (10 images)...
+2026-03-02T17:39:47Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet/gradcam/worst_10_gradcam.png
+2026-03-02T17:39:47Z | INFO     |        __main__ | Grad-CAM visualisation complete.
+2026-03-09T09:36:54Z | INFO     |        __main__ | Loading test data...
+2026-03-09T09:36:54Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_model_2026-03-04_00-52.pth
+2026-03-09T09:36:54Z | INFO     |        __main__ | Running inference on test set...
+2026-03-09T09:38:48Z | INFO     |        __main__ | Best error range : 0.00 – 0.02
+2026-03-09T09:38:48Z | INFO     |        __main__ | Worst error range: 158.92 – 76.13
+2026-03-09T09:38:54Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Best Predictions (10 images)...
+2026-03-09T09:39:11Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet/gradcam/best_10_gradcam.png
+2026-03-09T09:39:12Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Worst Predictions (10 images)...
+2026-03-09T09:39:28Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet/gradcam/worst_10_gradcam.png
+2026-03-09T09:39:28Z | INFO     |        __main__ | Grad-CAM visualisation complete.
+2026-03-09T09:45:58Z | INFO     |        __main__ | Loading test data...
+2026-03-09T09:45:58Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_model_2026-03-04_00-52.pth
+2026-03-09T09:45:58Z | INFO     |        __main__ | Running inference on test set...
+2026-03-09T09:47:51Z | INFO     |        __main__ | Best error range : 0.00 – 0.02
+2026-03-09T09:47:51Z | INFO     |        __main__ | Worst error range: 158.92 – 76.13
+2026-03-09T09:47:57Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Best Predictions (10 images)...
+2026-03-09T09:48:12Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet/gradcam/best_10_gradcam.png
+2026-03-09T09:48:13Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Worst Predictions (10 images)...
+2026-03-09T09:48:28Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet/gradcam/worst_10_gradcam.png
+2026-03-09T09:48:28Z | INFO     |        __main__ | Grad-CAM visualisation complete.

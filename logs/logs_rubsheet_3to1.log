@@ -1,0 +1,145 @@
+2026-03-09T09:58:44Z | INFO     |        __main__ | Loading test data...
+2026-03-09T09:58:44Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_3to1_model_2026-03-05_01-36.pth
+2026-03-09T09:58:44Z | INFO     |        __main__ | Running inference on test set...
+2026-03-09T09:59:40Z | INFO     |        __main__ | Best error range : 0.00 – 0.01
+2026-03-09T09:59:40Z | INFO     |        __main__ | Worst error range: 155.16 – 79.87
+2026-03-09T09:59:43Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Best Predictions (10 images)...
+2026-03-09T09:59:52Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/gradcam/best_10_gradcam.png
+2026-03-09T09:59:52Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Worst Predictions (10 images)...
+2026-03-09T10:00:01Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/gradcam/worst_10_gradcam.png
+2026-03-09T10:00:01Z | INFO     |        __main__ | Grad-CAM visualisation complete.
+2026-03-09T11:51:05Z | INFO     |        __main__ | === Occlusion Attribution — Rubsheet 3-to-1 ===
+2026-03-09T11:51:05Z | INFO     |        __main__ | Occlusion params: patch_size=50, stride=20, baseline_value=0.0
+2026-03-09T11:51:05Z | INFO     |        __main__ | Loading test data …
+2026-03-09T11:51:06Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_3to1_model_2026-03-05_01-36.pth
+2026-03-09T11:52:01Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-03-09T11:52:01Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/occlusion/summary.csv (4622 rows)
+2026-03-09T11:52:01Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [0.5–1.0]
+2026-03-09T11:52:01Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [0.4–9.0]
+2026-03-09T11:52:01Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [2.3–57.1]
+2026-03-09T11:52:01Z | INFO     | utils.attribution_map | Group 'best': label [9–965] W/m², error [0.0–0.0]
+2026-03-09T11:52:01Z | INFO     | utils.attribution_map | Group 'worst': label [214–975] W/m², error [84.8–155.2]
+2026-03-09T11:52:01Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.8–23.9]
+2026-03-09T11:52:02Z | INFO     | utils.attribution_map | Generating Occlusion grid: Low Irradiance (7 images) …
+2026-03-09T11:53:16Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/occlusion/low_occlusion.png
+2026-03-09T11:53:16Z | INFO     | utils.attribution_map | Generating Occlusion grid: Medium Irradiance (7 images) …
+2026-03-09T11:54:31Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/occlusion/medium_occlusion.png
+2026-03-09T11:54:31Z | INFO     | utils.attribution_map | Generating Occlusion grid: High Irradiance (7 images) …
+2026-03-09T11:55:45Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/occlusion/high_occlusion.png
+2026-03-09T11:55:46Z | INFO     | utils.attribution_map | Generating Occlusion grid: Best Predictions (lowest error) (7 images) …
+2026-03-09T11:57:00Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/occlusion/best_occlusion.png
+2026-03-09T11:57:00Z | INFO     | utils.attribution_map | Generating Occlusion grid: Worst Predictions (highest error) (7 images) …
+2026-03-09T11:58:15Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/occlusion/worst_occlusion.png
+2026-03-09T11:58:15Z | INFO     | utils.attribution_map | Generating Occlusion grid: Random Sample (7 images) …
+2026-03-09T11:59:29Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/occlusion/random_occlusion.png
+2026-03-09T11:59:29Z | INFO     |        __main__ | Occlusion analysis complete.
+2026-03-09T12:01:28Z | INFO     |        __main__ | === Occlusion Attribution — Rubsheet 3-to-1 ===
+2026-03-09T12:01:28Z | INFO     |        __main__ | Occlusion params: patch_size=40, stride=8, baseline_value=0.0
+2026-03-09T12:01:28Z | INFO     |        __main__ | Loading test data …
+2026-03-09T12:01:28Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_3to1_model_2026-03-05_01-36.pth
+2026-03-09T12:02:24Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-03-09T12:02:24Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/occlusion/summary.csv (4622 rows)
+2026-03-09T12:02:24Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [0.5–1.0]
+2026-03-09T12:02:24Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [0.4–9.0]
+2026-03-09T12:02:24Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [2.3–57.1]
+2026-03-09T12:02:24Z | INFO     | utils.attribution_map | Group 'best': label [9–965] W/m², error [0.0–0.0]
+2026-03-09T12:02:24Z | INFO     | utils.attribution_map | Group 'worst': label [214–975] W/m², error [84.8–155.2]
+2026-03-09T12:02:24Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.8–23.9]
+2026-03-09T12:02:24Z | INFO     | utils.attribution_map | Generating Occlusion grid: Low Irradiance (7 images) …
+2026-03-09T12:31:23Z | INFO     |        __main__ | === Integrated Gradients — Rubsheet 3-to-1 ===
+2026-03-09T12:31:23Z | INFO     |        __main__ | IG params: n_steps=20
+2026-03-09T12:31:23Z | INFO     |        __main__ | Loading test data …
+2026-03-09T12:31:23Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_3to1_model_2026-03-05_01-36.pth
+2026-03-09T12:33:56Z | INFO     |        __main__ | === Integrated Gradients — Rubsheet 3-to-1 ===
+2026-03-09T12:33:56Z | INFO     |        __main__ | IG params: n_steps=20
+2026-03-09T12:33:56Z | INFO     |        __main__ | Loading test data …
+2026-03-09T12:33:56Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_3to1_model_2026-03-05_01-36.pth
+2026-03-09T12:34:24Z | INFO     |        __main__ | === Integrated Gradients — Rubsheet 3-to-1 ===
+2026-03-09T12:34:24Z | INFO     |        __main__ | IG params: n_steps=20
+2026-03-09T12:34:24Z | INFO     |        __main__ | Loading test data …
+2026-03-09T12:34:24Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_3to1_model_2026-03-05_01-36.pth
+2026-03-09T12:35:19Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-03-09T12:35:19Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/summary.csv (4622 rows)
+2026-03-09T12:35:19Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [0.5–1.0]
+2026-03-09T12:35:19Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [0.4–9.0]
+2026-03-09T12:35:19Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [2.3–57.1]
+2026-03-09T12:35:19Z | INFO     | utils.attribution_map | Group 'best': label [9–965] W/m², error [0.0–0.0]
+2026-03-09T12:35:19Z | INFO     | utils.attribution_map | Group 'worst': label [214–975] W/m², error [84.8–155.2]
+2026-03-09T12:35:19Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.8–23.9]
+2026-03-09T12:35:20Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Low Irradiance (7 images) …
+2026-03-09T12:35:24Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/low_ig.png
+2026-03-09T12:35:24Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Medium Irradiance (7 images) …
+2026-03-09T12:35:29Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/medium_ig.png
+2026-03-09T12:35:29Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: High Irradiance (7 images) …
+2026-03-09T12:35:33Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/high_ig.png
+2026-03-09T12:35:33Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Best Predictions (lowest error) (7 images) …
+2026-03-09T12:35:37Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/best_ig.png
+2026-03-09T12:35:37Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Worst Predictions (highest error) (7 images) …
+2026-03-09T12:35:42Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/worst_ig.png
+2026-03-09T12:35:42Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Random Sample (7 images) …
+2026-03-09T12:35:46Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/random_ig.png
+2026-03-09T12:35:46Z | INFO     |        __main__ | Integrated Gradients analysis complete.
+2026-03-09T12:36:17Z | INFO     |        __main__ | === Integrated Gradients — Rubsheet 3-to-1 ===
+2026-03-09T12:36:17Z | INFO     |        __main__ | IG params: n_steps=50
+2026-03-09T12:36:17Z | INFO     |        __main__ | Loading test data …
+2026-03-09T12:36:17Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_3to1_model_2026-03-05_01-36.pth
+2026-03-09T12:37:12Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-03-09T12:37:12Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/summary.csv (4622 rows)
+2026-03-09T12:37:12Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [0.5–1.0]
+2026-03-09T12:37:12Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [0.4–9.0]
+2026-03-09T12:37:12Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [2.3–57.1]
+2026-03-09T12:37:12Z | INFO     | utils.attribution_map | Group 'best': label [9–965] W/m², error [0.0–0.0]
+2026-03-09T12:37:12Z | INFO     | utils.attribution_map | Group 'worst': label [214–975] W/m², error [84.8–155.2]
+2026-03-09T12:37:12Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.8–23.9]
+2026-03-09T12:37:12Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Low Irradiance (7 images) …
+2026-03-09T12:37:42Z | INFO     |        __main__ | === Integrated Gradients — Rubsheet 3-to-1 ===
+2026-03-09T12:37:42Z | INFO     |        __main__ | IG params: n_steps=35
+2026-03-09T12:37:42Z | INFO     |        __main__ | Loading test data …
+2026-03-09T12:37:42Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_3to1_model_2026-03-05_01-36.pth
+2026-03-09T12:38:37Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-03-09T12:38:37Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/summary.csv (4622 rows)
+2026-03-09T12:38:37Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [0.5–1.0]
+2026-03-09T12:38:37Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [0.4–9.0]
+2026-03-09T12:38:37Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [2.3–57.1]
+2026-03-09T12:38:37Z | INFO     | utils.attribution_map | Group 'best': label [9–965] W/m², error [0.0–0.0]
+2026-03-09T12:38:37Z | INFO     | utils.attribution_map | Group 'worst': label [214–975] W/m², error [84.8–155.2]
+2026-03-09T12:38:37Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.8–23.9]
+2026-03-09T12:38:38Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Low Irradiance (7 images) …
+2026-03-09T12:39:07Z | INFO     |        __main__ | === Integrated Gradients — Rubsheet 3-to-1 ===
+2026-03-09T12:39:07Z | INFO     |        __main__ | IG params: n_steps=25
+2026-03-09T12:39:07Z | INFO     |        __main__ | Loading test data …
+2026-03-09T12:39:07Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_3to1_model_2026-03-05_01-36.pth
+2026-03-09T12:40:02Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-03-09T12:40:02Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/summary.csv (4622 rows)
+2026-03-09T12:40:02Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [0.5–1.0]
+2026-03-09T12:40:02Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [0.4–9.0]
+2026-03-09T12:40:02Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [2.3–57.1]
+2026-03-09T12:40:02Z | INFO     | utils.attribution_map | Group 'best': label [9–965] W/m², error [0.0–0.0]
+2026-03-09T12:40:02Z | INFO     | utils.attribution_map | Group 'worst': label [214–975] W/m², error [84.8–155.2]
+2026-03-09T12:40:02Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.8–23.9]
+2026-03-09T12:40:02Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Low Irradiance (7 images) …
+2026-03-09T12:40:46Z | INFO     |        __main__ | === Integrated Gradients — Rubsheet 3-to-1 ===
+2026-03-09T12:40:46Z | INFO     |        __main__ | IG params: n_steps=20
+2026-03-09T12:40:46Z | INFO     |        __main__ | Loading test data …
+2026-03-09T12:40:46Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/rubsheet_3to1_model_2026-03-05_01-36.pth
+2026-03-09T12:41:41Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-03-09T12:41:41Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/summary.csv (4622 rows)
+2026-03-09T12:41:41Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [0.5–1.0]
+2026-03-09T12:41:41Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [0.4–9.0]
+2026-03-09T12:41:41Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [2.3–57.1]
+2026-03-09T12:41:41Z | INFO     | utils.attribution_map | Group 'best': label [9–965] W/m², error [0.0–0.0]
+2026-03-09T12:41:41Z | INFO     | utils.attribution_map | Group 'worst': label [214–975] W/m², error [84.8–155.2]
+2026-03-09T12:41:41Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.8–23.9]
+2026-03-09T12:41:41Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Low Irradiance (7 images) …
+2026-03-09T12:41:46Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/low_ig.png
+2026-03-09T12:41:46Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Medium Irradiance (7 images) …
+2026-03-09T12:41:50Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/medium_ig.png
+2026-03-09T12:41:50Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: High Irradiance (7 images) …
+2026-03-09T12:41:54Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/high_ig.png
+2026-03-09T12:41:55Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Best Predictions (lowest error) (7 images) …
+2026-03-09T12:41:59Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/best_ig.png
+2026-03-09T12:41:59Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Worst Predictions (highest error) (7 images) …
+2026-03-09T12:42:03Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/worst_ig.png
+2026-03-09T12:42:04Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Random Sample (7 images) …
+2026-03-09T12:42:08Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/ig/random_ig.png
+2026-03-09T12:42:08Z | INFO     |        __main__ | Integrated Gradients analysis complete.

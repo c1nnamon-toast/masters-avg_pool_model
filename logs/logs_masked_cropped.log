@@ -1,0 +1,104 @@
+2026-03-01T21:18:41Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:18:41Z | INFO     |        __main__ | Sky Image CNN Training — Masked Cropped Experiment
+2026-03-01T21:18:41Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:18:41Z | INFO     |        __main__ | Loading data...
+2026-03-01T21:18:41Z | INFO     |        __main__ | Train batches: 1600
+2026-03-01T21:18:41Z | INFO     |        __main__ | Val batches: 178
+2026-03-01T21:18:41Z | INFO     |        __main__ | Test batches: 289
+2026-03-01T21:18:41Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:18:41Z | INFO     |        __main__ | Exploratory Data Analysis
+2026-03-01T21:18:41Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:18:41Z | INFO     |    eda.analysis | DataFrame Info:
+2026-03-01T21:18:41Z | INFO     |    eda.analysis | Total samples: 33067
+2026-03-01T21:18:41Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-03-01T21:18:41Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-03-01T21:18:41Z | INFO     |    eda.analysis | Missing values: 0
+2026-03-01T21:18:41Z | INFO     |    eda.analysis | Zero values: 5
+2026-03-01T21:18:41Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/analysis/masked_cropped/2026-03-01_22-18/irradiance_distribution.png
+2026-03-01T21:18:41Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:18:41Z | INFO     |        __main__ | Creating model
+2026-03-01T21:18:41Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:18:41Z | INFO     |        __main__ | Total parameters: 14,282,913
+2026-03-01T21:18:41Z | INFO     |        __main__ | Trainable parameters: 14,282,913
+2026-03-01T21:18:41Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:18:41Z | INFO     |        __main__ | Training
+2026-03-01T21:18:41Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:18:41Z | INFO     |      nn.trainer | Starting training for 15 epochs...
+2026-03-01T21:18:41Z | INFO     |      nn.trainer | Epoch 1/15
+2026-03-01T21:20:56Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:20:56Z | INFO     |        __main__ | Sky Image CNN Training — Masked Cropped Experiment
+2026-03-01T21:20:56Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:20:56Z | INFO     |        __main__ | Loading data...
+2026-03-01T21:20:56Z | INFO     |        __main__ | Train batches: 1600
+2026-03-01T21:20:56Z | INFO     |        __main__ | Val batches: 178
+2026-03-01T21:20:56Z | INFO     |        __main__ | Test batches: 289
+2026-03-01T21:20:56Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:20:56Z | INFO     |        __main__ | Exploratory Data Analysis
+2026-03-01T21:20:56Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:20:56Z | INFO     |    eda.analysis | DataFrame Info:
+2026-03-01T21:20:56Z | INFO     |    eda.analysis | Total samples: 33067
+2026-03-01T21:20:56Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-03-01T21:20:56Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-03-01T21:20:56Z | INFO     |    eda.analysis | Missing values: 0
+2026-03-01T21:20:56Z | INFO     |    eda.analysis | Zero values: 5
+2026-03-01T21:20:57Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/analysis/masked_cropped/2026-03-01_22-20/irradiance_distribution.png
+2026-03-01T21:20:57Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:20:57Z | INFO     |        __main__ | Creating model
+2026-03-01T21:20:57Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:20:57Z | INFO     |        __main__ | Total parameters: 14,282,913
+2026-03-01T21:20:57Z | INFO     |        __main__ | Trainable parameters: 14,282,913
+2026-03-01T21:20:57Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:20:57Z | INFO     |        __main__ | Training
+2026-03-01T21:20:57Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:20:57Z | INFO     |      nn.trainer | Starting training for 3 epochs...
+2026-03-01T21:20:57Z | INFO     |      nn.trainer | Epoch 1/3
+2026-03-01T21:29:02Z | INFO     |      nn.trainer | Train Loss: 10787.3070 | Val Loss: 5235.0715
+2026-03-01T21:29:02Z | INFO     |      nn.trainer | Best model saved (val_loss: 5235.0715)
+2026-03-01T21:29:02Z | INFO     |      nn.trainer | Epoch 2/3
+2026-03-01T21:37:06Z | INFO     |      nn.trainer | Train Loss: 4856.9484 | Val Loss: 13140.1265
+2026-03-01T21:37:06Z | INFO     |      nn.trainer | Epoch 3/3
+2026-03-01T21:45:10Z | INFO     |      nn.trainer | Train Loss: 3522.7385 | Val Loss: 2788.5416
+2026-03-01T21:45:11Z | INFO     |      nn.trainer | Best model saved (val_loss: 2788.5416)
+2026-03-01T21:45:11Z | INFO     |      nn.trainer | Training complete! Time: 24.2 min
+2026-03-01T21:45:11Z | INFO     |      nn.trainer | Peak GPU Memory: 15067.03 MB
+2026-03-01T21:45:11Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:45:11Z | INFO     |        __main__ | Testing
+2026-03-01T21:45:11Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:45:11Z | INFO     | evaluation.evaluator | Loaded model from /home/xtsimbota_135764/masters/models/masked_cropped_model.pth
+2026-03-01T21:45:46Z | INFO     | evaluation.evaluator | Test Results:
+2026-03-01T21:45:46Z | INFO     | evaluation.evaluator |   MSE Loss: 2654.4075
+2026-03-01T21:45:46Z | INFO     | evaluation.evaluator |   RMSE: 51.5209 W/m²
+2026-03-01T21:45:46Z | INFO     | evaluation.evaluator |   MAE: 29.3280 W/m²
+2026-03-01T21:45:46Z | INFO     | evaluation.evaluator |   R² Score: 0.9643
+2026-03-01T21:45:46Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:45:46Z | INFO     |        __main__ | Generating plots
+2026-03-01T21:45:46Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:45:47Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/masked_cropped/2026-03-01_22-20/training_curves.png
+2026-03-01T21:45:47Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/masked_cropped/2026-03-01_22-20/predictions_vs_actual.png
+2026-03-01T21:45:48Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/masked_cropped/2026-03-01_22-20/error_distribution.png
+2026-03-01T21:45:48Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:45:48Z | INFO     |        __main__ | Creating report
+2026-03-01T21:45:48Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:45:48Z | INFO     |  utils.reporter | Saved: /home/xtsimbota_135764/masters/analysis/masked_cropped/2026-03-01_22-20/training_report_2026-03-01_22-45.md
+2026-03-01T21:45:48Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:45:48Z | INFO     |        __main__ | Training Complete!
+2026-03-01T21:45:48Z | INFO     |        __main__ | ============================================================
+2026-03-01T21:45:48Z | INFO     |        __main__ | Model saved: /home/xtsimbota_135764/masters/models/masked_cropped_model.pth

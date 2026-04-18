@@ -1,0 +1,354 @@
+2026-03-01T18:03:19Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:03:19Z | INFO     |        __main__ | Sky Image CNN Training — Fisheye Experiment
+2026-03-01T18:03:19Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:03:19Z | INFO     |        __main__ | Loading data...
+2026-03-01T18:03:19Z | INFO     |        __main__ | Train batches: 2560
+2026-03-01T18:03:19Z | INFO     |        __main__ | Val batches: 285
+2026-03-01T18:03:19Z | INFO     |        __main__ | Test batches: 463
+2026-03-01T18:03:19Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:03:19Z | INFO     |        __main__ | Exploratory Data Analysis
+2026-03-01T18:03:19Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:03:19Z | INFO     |    eda.analysis | DataFrame Info:
+2026-03-01T18:03:19Z | INFO     |    eda.analysis | Total samples: 33067
+2026-03-01T18:03:19Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-03-01T18:03:19Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-03-01T18:03:19Z | INFO     |    eda.analysis | Missing values: 0
+2026-03-01T18:03:19Z | INFO     |    eda.analysis | Zero values: 5
+2026-03-01T18:03:20Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/irradiance_distribution.png
+2026-03-01T18:03:20Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:03:20Z | INFO     |        __main__ | Creating model
+2026-03-01T18:03:20Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:03:20Z | INFO     |        __main__ | Total parameters: 14,282,913
+2026-03-01T18:03:20Z | INFO     |        __main__ | Trainable parameters: 14,282,913
+2026-03-01T18:03:20Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:03:20Z | INFO     |        __main__ | Training
+2026-03-01T18:03:20Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:03:20Z | INFO     |      nn.trainer | Starting training for 10 epochs...
+2026-03-01T18:03:20Z | INFO     |      nn.trainer | Epoch 1/10
+2026-03-01T18:06:15Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:06:15Z | INFO     |        __main__ | Sky Image CNN Training — Fisheye Experiment
+2026-03-01T18:06:15Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:06:15Z | INFO     |        __main__ | Loading data...
+2026-03-01T18:06:15Z | INFO     |        __main__ | Train batches: 2560
+2026-03-01T18:06:15Z | INFO     |        __main__ | Val batches: 285
+2026-03-01T18:06:15Z | INFO     |        __main__ | Test batches: 463
+2026-03-01T18:06:15Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:06:15Z | INFO     |        __main__ | Exploratory Data Analysis
+2026-03-01T18:06:15Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:06:15Z | INFO     |    eda.analysis | DataFrame Info:
+2026-03-01T18:06:15Z | INFO     |    eda.analysis | Total samples: 33067
+2026-03-01T18:06:15Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-03-01T18:06:15Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-03-01T18:06:15Z | INFO     |    eda.analysis | Missing values: 0
+2026-03-01T18:06:15Z | INFO     |    eda.analysis | Zero values: 5
+2026-03-01T18:06:15Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/irradiance_distribution.png
+2026-03-01T18:06:15Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:06:15Z | INFO     |        __main__ | Creating model
+2026-03-01T18:06:15Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:06:15Z | INFO     |        __main__ | Total parameters: 14,282,913
+2026-03-01T18:06:15Z | INFO     |        __main__ | Trainable parameters: 14,282,913
+2026-03-01T18:06:15Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:06:15Z | INFO     |        __main__ | Training
+2026-03-01T18:06:15Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:06:15Z | INFO     |      nn.trainer | Starting training for 4 epochs...
+2026-03-01T18:06:15Z | INFO     |      nn.trainer | Epoch 1/4
+2026-03-01T18:17:12Z | INFO     |      nn.trainer | Train Loss: 5620.0856 | Val Loss: 1466.7598
+2026-03-01T18:17:12Z | INFO     |      nn.trainer | Best model saved (val_loss: 1466.7598)
+2026-03-01T18:17:12Z | INFO     |      nn.trainer | Epoch 2/4
+2026-03-01T18:28:09Z | INFO     |      nn.trainer | Train Loss: 1813.4139 | Val Loss: 1283.5718
+2026-03-01T18:28:09Z | INFO     |      nn.trainer | Best model saved (val_loss: 1283.5718)
+2026-03-01T18:28:09Z | INFO     |      nn.trainer | Epoch 3/4
+2026-03-01T18:39:05Z | INFO     |      nn.trainer | Train Loss: 1152.3857 | Val Loss: 847.9744
+2026-03-01T18:39:05Z | INFO     |      nn.trainer | Best model saved (val_loss: 847.9744)
+2026-03-01T18:39:05Z | INFO     |      nn.trainer | Epoch 4/4
+2026-03-01T18:50:02Z | INFO     |      nn.trainer | Train Loss: 913.4018 | Val Loss: 486.0217
+2026-03-01T18:50:02Z | INFO     |      nn.trainer | Best model saved (val_loss: 486.0217)
+2026-03-01T18:50:02Z | INFO     |      nn.trainer | Training complete! Time: 43.8 min
+2026-03-01T18:50:02Z | INFO     |      nn.trainer | Peak GPU Memory: 12975.03 MB
+2026-03-01T18:50:02Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:50:02Z | INFO     |        __main__ | Testing
+2026-03-01T18:50:02Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:50:02Z | INFO     | evaluation.evaluator | Loaded model from /home/xtsimbota_135764/masters/models/fisheye_model.pth
+2026-03-01T18:50:53Z | INFO     | evaluation.evaluator | Test Results:
+2026-03-01T18:50:53Z | INFO     | evaluation.evaluator |   MSE Loss: 503.4359
+2026-03-01T18:50:53Z | INFO     | evaluation.evaluator |   RMSE: 22.4374 W/m²
+2026-03-01T18:50:53Z | INFO     | evaluation.evaluator |   MAE: 13.4658 W/m²
+2026-03-01T18:50:53Z | INFO     | evaluation.evaluator |   R² Score: 0.9932
+2026-03-01T18:50:53Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:50:53Z | INFO     |        __main__ | Generating plots
+2026-03-01T18:50:53Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:50:54Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/training_curves.png
+2026-03-01T18:50:54Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/predictions_vs_actual.png
+2026-03-01T18:50:55Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/error_distribution.png
+2026-03-01T18:50:55Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:50:55Z | INFO     |        __main__ | Creating report
+2026-03-01T18:50:55Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:50:55Z | INFO     |  utils.reporter | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/training_report_2026-03-01_19-50.md
+2026-03-01T18:50:55Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:50:55Z | INFO     |        __main__ | Training Complete!
+2026-03-01T18:50:55Z | INFO     |        __main__ | ============================================================
+2026-03-01T18:50:55Z | INFO     |        __main__ | Model saved: /home/xtsimbota_135764/masters/models/fisheye_model.pth
+2026-03-01T19:18:03Z | INFO     |        __main__ | ============================================================
+2026-03-01T19:18:03Z | INFO     |        __main__ | Sky Image CNN Training — Fisheye Experiment
+2026-03-01T19:18:03Z | INFO     |        __main__ | ============================================================
+2026-03-01T19:18:03Z | INFO     |        __main__ | Loading data...
+2026-03-01T19:26:33Z | INFO     |        __main__ | ============================================================
+2026-03-01T19:26:33Z | INFO     |        __main__ | Sky Image CNN Training — Fisheye Experiment
+2026-03-01T19:26:33Z | INFO     |        __main__ | ============================================================
+2026-03-01T19:26:33Z | INFO     |        __main__ | Loading data...
+2026-03-01T19:26:33Z | INFO     |        __main__ | Train batches: 1600
+2026-03-01T19:26:33Z | INFO     |        __main__ | Val batches: 178
+2026-03-01T19:26:33Z | INFO     |        __main__ | Test batches: 289
+2026-03-01T19:26:33Z | INFO     |        __main__ | ============================================================
+2026-03-01T19:26:33Z | INFO     |        __main__ | Exploratory Data Analysis
+2026-03-01T19:26:33Z | INFO     |        __main__ | ============================================================
+2026-03-01T19:26:33Z | INFO     |    eda.analysis | DataFrame Info:
+2026-03-01T19:26:33Z | INFO     |    eda.analysis | Total samples: 33067
+2026-03-01T19:26:33Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-03-01T19:26:33Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-03-01T19:26:33Z | INFO     |    eda.analysis | Missing values: 0
+2026-03-01T19:26:33Z | INFO     |    eda.analysis | Zero values: 5
+2026-03-01T19:26:33Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/2026-03-01_20-26/irradiance_distribution.png
+2026-03-01T19:26:33Z | INFO     |        __main__ | ============================================================
+2026-03-01T19:26:33Z | INFO     |        __main__ | Creating model
+2026-03-01T19:26:33Z | INFO     |        __main__ | ============================================================
+2026-03-01T19:26:34Z | INFO     |        __main__ | Total parameters: 14,282,913
+2026-03-01T19:26:34Z | INFO     |        __main__ | Trainable parameters: 14,282,913
+2026-03-01T19:26:34Z | INFO     |        __main__ | ============================================================
+2026-03-01T19:26:34Z | INFO     |        __main__ | Training
+2026-03-01T19:26:34Z | INFO     |        __main__ | ============================================================
+2026-03-01T19:26:34Z | INFO     |      nn.trainer | Starting training for 4 epochs...
+2026-03-01T19:26:34Z | INFO     |      nn.trainer | Epoch 1/4
+2026-03-01T19:37:37Z | INFO     |      nn.trainer | Train Loss: 6496.6780 | Val Loss: 2062.0979
+2026-03-01T19:37:37Z | INFO     |      nn.trainer | Best model saved (val_loss: 2062.0979)
+2026-03-01T19:37:37Z | INFO     |      nn.trainer | Epoch 2/4
+2026-03-01T19:48:38Z | INFO     |      nn.trainer | Train Loss: 2319.2610 | Val Loss: 1777.6801
+2026-03-01T19:48:38Z | INFO     |      nn.trainer | Best model saved (val_loss: 1777.6801)
+2026-03-01T19:48:38Z | INFO     |      nn.trainer | Epoch 3/4
+2026-03-01T19:59:38Z | INFO     |      nn.trainer | Train Loss: 1521.4532 | Val Loss: 654.5351
+2026-03-01T19:59:39Z | INFO     |      nn.trainer | Best model saved (val_loss: 654.5351)
+2026-03-01T19:59:39Z | INFO     |      nn.trainer | Epoch 4/4
+2026-03-01T20:10:38Z | INFO     |      nn.trainer | Train Loss: 1101.8550 | Val Loss: 663.9712
+2026-03-01T20:10:38Z | INFO     |      nn.trainer | Training complete! Time: 44.1 min
+2026-03-01T20:10:38Z | INFO     |      nn.trainer | Peak GPU Memory: 20620.22 MB
+2026-03-01T20:10:38Z | INFO     |        __main__ | ============================================================
+2026-03-01T20:10:38Z | INFO     |        __main__ | Testing
+2026-03-01T20:10:38Z | INFO     |        __main__ | ============================================================
+2026-03-01T20:10:39Z | INFO     | evaluation.evaluator | Loaded model from /home/xtsimbota_135764/masters/models/fisheye_model.pth
+2026-03-01T20:11:31Z | INFO     | evaluation.evaluator | Test Results:
+2026-03-01T20:11:31Z | INFO     | evaluation.evaluator |   MSE Loss: 604.3298
+2026-03-01T20:11:31Z | INFO     | evaluation.evaluator |   RMSE: 24.5831 W/m²
+2026-03-01T20:11:31Z | INFO     | evaluation.evaluator |   MAE: 14.6843 W/m²
+2026-03-01T20:11:31Z | INFO     | evaluation.evaluator |   R² Score: 0.9919
+2026-03-01T20:11:31Z | INFO     |        __main__ | ============================================================
+2026-03-01T20:11:31Z | INFO     |        __main__ | Generating plots
+2026-03-01T20:11:31Z | INFO     |        __main__ | ============================================================
+2026-03-01T20:11:31Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/2026-03-01_20-26/training_curves.png
+2026-03-01T20:11:31Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/2026-03-01_20-26/predictions_vs_actual.png
+2026-03-01T20:11:32Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/2026-03-01_20-26/error_distribution.png
+2026-03-01T20:11:32Z | INFO     |        __main__ | ============================================================
+2026-03-01T20:11:32Z | INFO     |        __main__ | Creating report
+2026-03-01T20:11:32Z | INFO     |        __main__ | ============================================================
+2026-03-01T20:11:32Z | INFO     |  utils.reporter | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/2026-03-01_20-26/training_report_2026-03-01_21-11.md
+2026-03-01T20:11:32Z | INFO     |        __main__ | ============================================================
+2026-03-01T20:11:32Z | INFO     |        __main__ | Training Complete!
+2026-03-01T20:11:32Z | INFO     |        __main__ | ============================================================
+2026-03-01T20:11:32Z | INFO     |        __main__ | Model saved: /home/xtsimbota_135764/masters/models/fisheye_model.pth
+2026-03-02T14:04:14Z | INFO     |        __main__ | Loading test data...
+2026-03-02T14:04:14Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/fisheye_model.pth
+2026-03-02T14:04:14Z | INFO     |        __main__ | Running inference on test set...
+2026-03-02T14:05:24Z | INFO     |        __main__ | Best error range : 0.00 – 0.02
+2026-03-02T14:05:24Z | INFO     |        __main__ | Worst error range: 153.37 – 113.23
+2026-03-02T14:05:28Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Best Predictions (10 images)...
+2026-03-02T14:05:36Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/gradcam/best_10_gradcam.png
+2026-03-02T14:05:36Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Worst Predictions (10 images)...
+2026-03-02T14:05:45Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/gradcam/worst_10_gradcam.png
+2026-03-02T14:05:45Z | INFO     |        __main__ | Grad-CAM visualisation complete.
+2026-03-02T17:28:27Z | INFO     |        __main__ | Loading test data...
+2026-03-02T17:28:27Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/fisheye_model.pth
+2026-03-02T17:28:27Z | INFO     |        __main__ | Running inference on test set...
+2026-03-02T17:29:38Z | INFO     |        __main__ | Best error range : 0.00 – 0.02
+2026-03-02T17:29:38Z | INFO     |        __main__ | Worst error range: 153.37 – 113.23
+2026-03-02T17:29:41Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Best Predictions (10 images)...
+2026-03-02T17:29:51Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/gradcam/best_10_gradcam.png
+2026-03-02T17:29:51Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Worst Predictions (10 images)...
+2026-03-02T17:30:02Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/gradcam/worst_10_gradcam.png
+2026-03-02T17:30:02Z | INFO     |        __main__ | Grad-CAM visualisation complete.
+2026-03-09T09:25:42Z | INFO     |        __main__ | Loading test data...
+2026-03-09T09:34:10Z | INFO     |        __main__ | Loading test data...
+2026-03-09T09:34:53Z | INFO     |        __main__ | Loading test data...
+2026-03-09T09:34:53Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/fisheye_model_2026-03-03_19-56.pth
+2026-03-09T09:34:53Z | INFO     |        __main__ | Running inference on test set...
+2026-03-09T09:36:05Z | INFO     |        __main__ | Best error range : 0.00 – 0.01
+2026-03-09T09:36:05Z | INFO     |        __main__ | Worst error range: 148.67 – 65.26
+2026-03-09T09:36:09Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Best Predictions (10 images)...
+2026-03-09T09:36:21Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/gradcam/best_10_gradcam.png
+2026-03-09T09:36:21Z | INFO     |        __main__ | Generating Grad-CAM grid: Top 10 Worst Predictions (10 images)...
+2026-03-09T09:36:33Z | INFO     |        __main__ | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/gradcam/worst_10_gradcam.png
+2026-03-09T09:36:33Z | INFO     |        __main__ | Grad-CAM visualisation complete.
+2026-03-09T11:14:40Z | INFO     |        __main__ | === Occlusion Attribution — Fisheye ===
+2026-03-09T11:14:40Z | INFO     |        __main__ | Occlusion params: patch_size=67, stride=34, baseline_value=0.0
+2026-03-09T11:14:40Z | INFO     |        __main__ | Loading test data …
+2026-03-09T11:14:40Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/fisheye_model_2026-03-03_19-56.pth
+2026-03-09T11:15:53Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-03-09T11:15:53Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/summary.csv (4622 rows)
+2026-03-09T11:15:53Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [1.1–2.5]
+2026-03-09T11:15:53Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [2.0–10.4]
+2026-03-09T11:15:53Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [0.7–50.9]
+2026-03-09T11:15:53Z | INFO     | utils.attribution_map | Group 'best': label [9–784] W/m², error [0.0–0.0]
+2026-03-09T11:15:53Z | INFO     | utils.attribution_map | Group 'worst': label [362–975] W/m², error [68.8–148.7]
+2026-03-09T11:15:53Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.0–14.9]
+2026-03-09T11:15:53Z | INFO     | utils.attribution_map | Generating Occlusion grid: Low Irradiance (7 images) …
+2026-03-09T11:16:43Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/low_occlusion.png
+2026-03-09T11:16:43Z | INFO     | utils.attribution_map | Generating Occlusion grid: Medium Irradiance (7 images) …
+2026-03-09T11:17:34Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/medium_occlusion.png
+2026-03-09T11:17:34Z | INFO     | utils.attribution_map | Generating Occlusion grid: High Irradiance (7 images) …
+2026-03-09T11:18:24Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/high_occlusion.png
+2026-03-09T11:18:24Z | INFO     | utils.attribution_map | Generating Occlusion grid: Best Predictions (lowest error) (7 images) …
+2026-03-09T11:19:15Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/best_occlusion.png
+2026-03-09T11:19:15Z | INFO     | utils.attribution_map | Generating Occlusion grid: Worst Predictions (highest error) (7 images) …
+2026-03-09T11:20:05Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/worst_occlusion.png
+2026-03-09T11:20:05Z | INFO     | utils.attribution_map | Generating Occlusion grid: Random Sample (7 images) …
+2026-03-09T11:20:55Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/random_occlusion.png
+2026-03-09T11:20:55Z | INFO     |        __main__ | Occlusion analysis complete.
+2026-03-09T11:23:00Z | INFO     |        __main__ | === Occlusion Attribution — Fisheye ===
+2026-03-09T11:23:00Z | INFO     |        __main__ | Occlusion params: patch_size=50, stride=15, baseline_value=0.0
+2026-03-09T11:23:00Z | INFO     |        __main__ | Loading test data …
+2026-03-09T11:23:00Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/fisheye_model_2026-03-03_19-56.pth
+2026-03-09T11:23:41Z | INFO     |        __main__ | === Occlusion Attribution — Fisheye ===
+2026-03-09T11:23:41Z | INFO     |        __main__ | Occlusion params: patch_size=40, stride=10, baseline_value=0.0
+2026-03-09T11:23:41Z | INFO     |        __main__ | Loading test data …
+2026-03-09T11:23:41Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/fisheye_model_2026-03-03_19-56.pth
+2026-03-09T11:24:52Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-03-09T11:24:52Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/summary.csv (4622 rows)
+2026-03-09T11:24:52Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [1.1–2.5]
+2026-03-09T11:24:52Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [2.0–10.4]
+2026-03-09T11:24:52Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [0.7–50.9]
+2026-03-09T11:24:52Z | INFO     | utils.attribution_map | Group 'best': label [9–784] W/m², error [0.0–0.0]
+2026-03-09T11:24:52Z | INFO     | utils.attribution_map | Group 'worst': label [362–975] W/m², error [68.8–148.7]
+2026-03-09T11:24:52Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.0–14.9]
+2026-03-09T11:24:52Z | INFO     | utils.attribution_map | Generating Occlusion grid: Low Irradiance (7 images) …
+2026-03-09T11:33:06Z | INFO     |        __main__ | === Occlusion Attribution — Fisheye ===
+2026-03-09T11:33:06Z | INFO     |        __main__ | Occlusion params: patch_size=50, stride=20, baseline_value=0.0
+2026-03-09T11:33:06Z | INFO     |        __main__ | Loading test data …
+2026-03-09T11:33:06Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/fisheye_model_2026-03-03_19-56.pth
+2026-03-09T11:35:09Z | INFO     |        __main__ | === Occlusion Attribution — Fisheye ===
+2026-03-09T11:35:09Z | INFO     |        __main__ | Occlusion params: patch_size=50, stride=20, baseline_value=0.0
+2026-03-09T11:35:09Z | INFO     |        __main__ | Loading test data …
+2026-03-09T11:35:09Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/fisheye_model_2026-03-03_19-56.pth
+2026-03-09T11:36:22Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-03-09T11:36:22Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/summary.csv (4622 rows)
+2026-03-09T11:36:22Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [1.1–2.5]
+2026-03-09T11:36:22Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [2.0–10.4]
+2026-03-09T11:36:22Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [0.7–50.9]
+2026-03-09T11:36:22Z | INFO     | utils.attribution_map | Group 'best': label [9–784] W/m², error [0.0–0.0]
+2026-03-09T11:36:22Z | INFO     | utils.attribution_map | Group 'worst': label [362–975] W/m², error [68.8–148.7]
+2026-03-09T11:36:22Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.0–14.9]
+2026-03-09T11:36:22Z | INFO     | utils.attribution_map | Generating Occlusion grid: Low Irradiance (7 images) …
+2026-03-09T11:38:37Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/low_occlusion.png
+2026-03-09T11:38:37Z | INFO     | utils.attribution_map | Generating Occlusion grid: Medium Irradiance (7 images) …
+2026-03-09T11:40:53Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/medium_occlusion.png
+2026-03-09T11:40:53Z | INFO     | utils.attribution_map | Generating Occlusion grid: High Irradiance (7 images) …
+2026-03-09T11:43:08Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/high_occlusion.png
+2026-03-09T11:43:08Z | INFO     | utils.attribution_map | Generating Occlusion grid: Best Predictions (lowest error) (7 images) …
+2026-03-09T11:45:23Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/best_occlusion.png
+2026-03-09T11:45:23Z | INFO     | utils.attribution_map | Generating Occlusion grid: Worst Predictions (highest error) (7 images) …
+2026-03-09T11:47:39Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/worst_occlusion.png
+2026-03-09T11:47:39Z | INFO     | utils.attribution_map | Generating Occlusion grid: Random Sample (7 images) …
+2026-03-09T11:49:54Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/occlusion/random_occlusion.png
+2026-03-09T11:49:54Z | INFO     |        __main__ | Occlusion analysis complete.
+2026-03-09T12:18:53Z | INFO     |        __main__ | === Integrated Gradients — Fisheye ===
+2026-03-09T12:18:53Z | INFO     |        __main__ | IG params: n_steps=50
+2026-03-09T12:18:53Z | INFO     |        __main__ | Loading test data …
+2026-03-09T12:18:53Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/fisheye_model_2026-03-03_19-56.pth
+2026-03-09T12:20:05Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-03-09T12:20:05Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/fisheye/ig/summary.csv (4622 rows)
+2026-03-09T12:20:05Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [1.1–2.5]
+2026-03-09T12:20:05Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [2.0–10.4]
+2026-03-09T12:20:05Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [0.7–50.9]
+2026-03-09T12:20:05Z | INFO     | utils.attribution_map | Group 'best': label [9–784] W/m², error [0.0–0.0]
+2026-03-09T12:20:05Z | INFO     | utils.attribution_map | Group 'worst': label [362–975] W/m², error [68.8–148.7]
+2026-03-09T12:20:05Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.0–14.9]
+2026-03-09T12:20:05Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Low Irradiance (7 images) …
+2026-03-09T12:21:47Z | INFO     |        __main__ | === Integrated Gradients — Fisheye ===
+2026-03-09T12:21:47Z | INFO     |        __main__ | IG params: n_steps=20
+2026-03-09T12:21:47Z | INFO     |        __main__ | Loading test data …
+2026-03-09T12:21:47Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/fisheye_model_2026-03-03_19-56.pth
+2026-03-09T12:22:59Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-03-09T12:22:59Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/fisheye/ig/summary.csv (4622 rows)
+2026-03-09T12:22:59Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [1.1–2.5]
+2026-03-09T12:22:59Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [2.0–10.4]
+2026-03-09T12:22:59Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [0.7–50.9]
+2026-03-09T12:22:59Z | INFO     | utils.attribution_map | Group 'best': label [9–784] W/m², error [0.0–0.0]
+2026-03-09T12:22:59Z | INFO     | utils.attribution_map | Group 'worst': label [362–975] W/m², error [68.8–148.7]
+2026-03-09T12:22:59Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.0–14.9]
+2026-03-09T12:22:59Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Low Irradiance (7 images) …
+2026-03-09T12:25:20Z | INFO     |        __main__ | === Integrated Gradients — Fisheye ===
+2026-03-09T12:25:20Z | INFO     |        __main__ | IG params: n_steps=10
+2026-03-09T12:25:20Z | INFO     |        __main__ | Loading test data …
+2026-03-09T12:25:20Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/fisheye_model_2026-03-03_19-56.pth
+2026-03-09T12:26:31Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-03-09T12:26:31Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/fisheye/ig/summary.csv (4622 rows)
+2026-03-09T12:26:31Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [1.1–2.5]
+2026-03-09T12:26:31Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [2.0–10.4]
+2026-03-09T12:26:31Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [0.7–50.9]
+2026-03-09T12:26:31Z | INFO     | utils.attribution_map | Group 'best': label [9–784] W/m², error [0.0–0.0]
+2026-03-09T12:26:31Z | INFO     | utils.attribution_map | Group 'worst': label [362–975] W/m², error [68.8–148.7]
+2026-03-09T12:26:31Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.0–14.9]
+2026-03-09T12:26:32Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Low Irradiance (7 images) …
+2026-03-09T12:26:37Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/ig/low_ig.png
+2026-03-09T12:26:37Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Medium Irradiance (7 images) …
+2026-03-09T12:26:42Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/ig/medium_ig.png
+2026-03-09T12:26:42Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: High Irradiance (7 images) …
+2026-03-09T12:26:53Z | INFO     |        __main__ | === Integrated Gradients — Fisheye ===
+2026-03-09T12:26:53Z | INFO     |        __main__ | IG params: n_steps=15
+2026-03-09T12:26:53Z | INFO     |        __main__ | Loading test data …
+2026-03-09T12:26:53Z | INFO     |        __main__ | Loading model from /home/xtsimbota_135764/masters/models/fisheye_model_2026-03-03_19-56.pth
+2026-03-09T12:28:05Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-03-09T12:28:05Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/fisheye/ig/summary.csv (4622 rows)
+2026-03-09T12:28:05Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [1.1–2.5]
+2026-03-09T12:28:05Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [2.0–10.4]
+2026-03-09T12:28:05Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [0.7–50.9]
+2026-03-09T12:28:05Z | INFO     | utils.attribution_map | Group 'best': label [9–784] W/m², error [0.0–0.0]
+2026-03-09T12:28:05Z | INFO     | utils.attribution_map | Group 'worst': label [362–975] W/m², error [68.8–148.7]
+2026-03-09T12:28:05Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.0–14.9]
+2026-03-09T12:28:05Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Low Irradiance (7 images) …
+2026-03-09T12:28:11Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/ig/low_ig.png
+2026-03-09T12:28:11Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Medium Irradiance (7 images) …
+2026-03-09T12:28:17Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/ig/medium_ig.png
+2026-03-09T12:28:17Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: High Irradiance (7 images) …
+2026-03-09T12:28:22Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/ig/high_ig.png
+2026-03-09T12:28:23Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Best Predictions (lowest error) (7 images) …
+2026-03-09T12:28:28Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/ig/best_ig.png
+2026-03-09T12:28:28Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Worst Predictions (highest error) (7 images) …
+2026-03-09T12:28:34Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/ig/worst_ig.png
+2026-03-09T12:28:34Z | INFO     | utils.attribution_map | Generating Integrated Gradients grid: Random Sample (7 images) …
+2026-03-09T12:28:40Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/fisheye/ig/random_ig.png
+2026-03-09T12:28:40Z | INFO     |        __main__ | Integrated Gradients analysis complete.
